@@ -26,7 +26,7 @@ describe('various example tests', () => {
     cy.location('pathname').should('equal', '/best-practices')
   })
 
-  it.only('intercepting requests', () => {
+  it('intercepting requests', () => {
     // cy.intercept('POST', 'http://localhost:3000/examples', {
     //   statusCode: 200,
     //   body: {
@@ -39,5 +39,9 @@ describe('various example tests', () => {
     })
     cy.getDataTest('post-button').click()
     cy.getDataTest('post-response').should('contain.text', 'Using fixtures to represent data')
+  })
+
+  it('grudges example', () => {
+    
   })
 })
